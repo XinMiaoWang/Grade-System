@@ -13,15 +13,12 @@ public class Main {
 		UI ui = new UI();
 		
 		//	student information
-		String filename = "D:/eclipse-workspace/grade_system/src/gradeInput.txt";
+		String filename = ../data/gradeInput.txt";
 		List<Student> Userlist = new ArrayList<Student>();
-		//Userlist.add(new Student("962001044", "­â©v§Ê", 87, 86 ,98 ,88 ,87));
-		//Userlist.add(new Student("962001051", "§õ«Â§Ê", 81, 98 ,84 ,90 ,93));
 		
 		try {
 			gs.loadData(filename,Userlist);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -38,7 +35,7 @@ public class Main {
 			
 			pass = gs.containID(user, Userlist); // check student exist or not
 			if(pass==false) {
-				ie.IDExceptions(); // ID¿ù»~
+				ie.IDExceptions(); // ID error
 				continue;
 			}
 			
@@ -60,13 +57,13 @@ public class Main {
 						gs.LoadGrade(Userlist);
 						break;
 					default:	
-						ce.CommandExceptions(); // «ü¥O¿ù»~
+						ce.CommandExceptions(); // Command error
 						break;
 				}
 			}
 		}
 		
-		ui.showFinishMsg();	// end
+		ui.showFinishMsg(); // end
 	}
 
 }
