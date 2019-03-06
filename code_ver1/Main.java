@@ -49,7 +49,6 @@ public class Main {
 						gs.showGrade(user, Userlist);
 						break;
 					case"R":	
-						//System.out.println("aGradeSystem showRank(ID)");
 						gs.showRank(user, Userlist);
 						break;
 					case"W":
